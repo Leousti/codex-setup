@@ -1,17 +1,55 @@
-**Tällä skriptillä pääset näppärästi tekemään koodaus tai ei-koodaukseen liittyviä projekteja codexilla.**
+# codex-startti ohjeet
 
-Projektin sisältö:
+`codex-startti.sh` luo uuden Codex-projektikansion joko koodaus- tai ei-koodausprojektia varten.
 
--avaa-codex-projekti-ohjeet.md
+Skriptin käyttö:
 
--avaa-codex-projekti.sh
+```bash
+cd /home/<user>/polku/jossa/skripti/on
+chmod +x codex-startti.sh
+./codex-startti.sh
+```
 
--codex-startti-ohjeet.md
+Mitä skripti tekee:
 
--codex-startti.sh
+- kysyy kohdehakemiston `/home/` alta
+- luo kohdehakemiston, jos sitä ei vielä ole
+- kysyy projektin nimen
+- luo projektikansion ja sinne tiedostot:
+  - `AGENTS.md`
+  - `NOW.md`
+  - `CHECKPOINTS.md`
+  - `codex_READMEFIRST.md`
+  - `<projektin_nimi>.md`
+- avaa uuden terminaali-ikkunan tarvittaessa
+- siirtyy luotuun projektikansioon
+- näyttää ohjeet Codexin käynnistämiseen
+- jättää terminaalin auki projektikansioon
 
-codex-startti.sh on skripti jolla aloitat codex-vibekoodausprojektit, tyhjästä, luomalla projektikansion jossa tekoälymallin tekemät muokkaukset ja kirjaukset kirjataa .md tiedostoihin ja hallusinointi vähenee, sekä johdonmukaisuus ja muisti paranee.
+Kun skripti on valmis, olet valmiiksi projektikansiossa. Käynnistä siellä Codex ja käytä ensimmäisenä viestinä: `lue codex_READMEFIRST.md`
 
-avaa-codex-projekti.sh on skripti, jolla pääset helposti vanhoihin, codex-startti.sh skriptillä luotuihin vanhoihin projektitiedostoihisi. 
 
-markdown tiedostoista löytyy kummallekin skriptille tarkemmat ohjeet, mitä skripti tekee. 
+Jatkokäyttö:
+
+# avaa-codex-projekti
+
+`avaa-codex-projekti.sh` on työkalu jolla pääset näppärästi takaisin olemassa oleviin projekteihisi.
+
+Skriptin käyttö:
+
+```bash
+cd /home/<user>/polku/jossa/skripti/on
+chmod +x avaa-codex-projekti.sh
+./avaa-codex-projekti.sh
+```
+
+Mitä skripti tekee:
+
+- avaa uuden terminaali-ikkunan
+- kysyy kohdehakemiston `/home/` alta
+- näyttää hakemistossa olemassa olevat projektit
+- siirtyy luotuun projektikansioon
+- näyttää ohjeet Codexin käynnistämiseen
+- jättää terminaalin auki projektikansioon
+
+Kun skripti on valmis, olet valmiiksi projektikansiossa. Käynnistä siellä Codex ja kirjoita: `Missä mennään?`
